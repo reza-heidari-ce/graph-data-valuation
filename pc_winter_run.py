@@ -47,6 +47,7 @@ import copy
 import torch_geometric.transforms as T
 from torch.nn.functional import cosine_similarity
 from torch_geometric.datasets import Amazon
+from torch_geometric.datasets import WikiCS
 
 from typing import Optional
 from torch import Tensor
@@ -380,6 +381,8 @@ if __name__ == "__main__":
     elif args.dataset == 'Physics':
         dataset = Coauthor(root='dataset/Coauthor', name=args.dataset, transform=T.NormalizeFeatures())
         config_path = f'./config/Coauthor-{args.dataset}.pkl'
+    elif args.dataset = 'WikiCS':
+        dataset = WikiCS(root='dataset/' + dataset_name, transform=T.NormalizeFeatures())
     else:
         dataset = Planetoid(root='dataset/' + dataset_name, name=dataset_name, transform=T.NormalizeFeatures())
     
