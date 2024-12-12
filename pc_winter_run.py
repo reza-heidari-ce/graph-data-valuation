@@ -381,7 +381,7 @@ if __name__ == "__main__":
     elif args.dataset == 'Physics':
         dataset = Coauthor(root='dataset/Coauthor', name=args.dataset, transform=T.NormalizeFeatures())
         config_path = f'./config/Coauthor-{args.dataset}.pkl'
-    elif args.dataset = 'WikiCS':
+    elif args.dataset == 'WikiCS':
         dataset = WikiCS(root='dataset/' + dataset_name, transform=T.NormalizeFeatures())
     else:
         dataset = Planetoid(root='dataset/' + dataset_name, name=dataset_name, transform=T.NormalizeFeatures())
